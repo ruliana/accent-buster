@@ -23,9 +23,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
-'ação'.accent\_buster # => 'acao'
+'ação'.accent_buster # => 'acao'
 x = 'é você?'
-x.accent\_buster!
+x.accent_buster!
 # => x = 'e voce'
 ```
 
