@@ -22,12 +22,12 @@ Or install it yourself as:
 
 ## Usage
 
-!!!ruby
-  'ação'.accent\_buster # => 'acao'
-  x = 'é você?'
-  x.accent\_buster!
-  # => x = 'e voce'
-!!!
+```ruby
+'ação'.accent\_buster # => 'acao'
+x = 'é você?'
+x.accent\_buster!
+# => x = 'e voce'
+```
 
 ## Contributing
 
