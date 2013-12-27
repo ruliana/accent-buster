@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ronie.uliana@gmail.com"]
   spec.description   = %q{Add "String#accent_buster" that replaces diacritics marks by their non-diacritic equivalents.}
   spec.summary       = %q{Add "String#accent_buster" that replaces diacritics marks by their non-diacritic equivalents. I made it because I don't want to add "ActiveSupport" to the projects everytime I need that (also, I'm too lazy to type the same thing all the time). This lib will have NO MORE than the very strictly necessary to replace diacritics, currently, it has 2 methods: "String#accent_buster" and "String#accent_buster!" (note the bang).}
-  spec.homepage      = ""
+  spec.homepage      = "http://github.com/ruliana/accent-buster"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
