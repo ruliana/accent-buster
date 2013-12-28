@@ -6,6 +6,8 @@ I made it because I don't want to add "ActiveSupport" to the projects everytime 
 
 This lib will have NO MORE than the very strictly necessary to replace diacritics, currently, it has 2 methods: "String#accent_buster" and "String#accent_buster!" (note the bang).
 
+Accent Buster uses refinements, so, ruby 2.0+ only.
+
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -23,6 +25,9 @@ Or install it yourself as:
 ## Usage
 
 ```ruby
+# Refinements!
+using AccentBuster::StringExtension
+
 'ação'.accent_buster # => 'acao'
 x = 'é você?'
 x.accent_buster!

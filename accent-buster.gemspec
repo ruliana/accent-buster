@@ -4,6 +4,9 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'accent-buster/version'
 
 Gem::Specification.new do |spec|
+  # We are using refinements
+  spec.required_ruby_version = '>= 2.0'
+
   spec.name          = "accent-buster"
   spec.version       = AccentBuster::VERSION
   spec.authors       = ["Ronie Uliana"]
