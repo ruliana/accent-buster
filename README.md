@@ -2,9 +2,11 @@
 
 Add "String#accent\_buster" that replaces diacritics marks by their non-diacritic equivalents.
 
+Modify "String#downcase", "String#downcase!", "String#upcase", "String#upcase!" to correctly handle diacritics.
+
 I made it because I don't want to add "ActiveSupport" to the projects everytime I need that (also, I'm too lazy to type the same thing all the time).
 
-This lib will have NO MORE than the very strictly necessary to replace diacritics, currently, it has 2 methods: "String#accent_buster" and "String#accent_buster!" (note the bang).
+BTW, if you want to get really serious on that, the gem "UnicodeUtils" is a far better (and more complete) option. ^\_^
 
 Accent Buster uses refinements, so, ruby 2.0+ only.
 
@@ -32,6 +34,11 @@ using AccentBuster::StringExtension
 x = 'é você?'
 x.accent_buster!
 # => x = 'e voce'
+
+'ação'.upcase # => 'AÇÃO'
+x = 'é você?'
+x.upcase!
+# => x = 'É VOCÊ?'
 ```
 
 ## Contributing
