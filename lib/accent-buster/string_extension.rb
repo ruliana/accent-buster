@@ -1,9 +1,10 @@
 module AccentBuster::StringExtension
+  # @deprecated Use [Buster] or include [AccentBuster] to use #buster method
   refine String do
-    ACCENT_DOWNCASE    = 'áéíóúâêîôûäëïöüãõñç'
-    NO_ACCENT_DOWNCASE = 'aeiouaeiouaeiouaonc'
-    ACCENT_UPCASE      = 'ÁÉÍÓÚÂÊÎÔÛÄËÏÖÜÃÕÑÇ'
-    NO_ACCENT_UPCASE   = 'AEIOUAEIOUAEIOUAONC'
+    ACCENT_DOWNCASE    = "áéíóúâêîôûäëïöüãõñç"
+    NO_ACCENT_DOWNCASE = "aeiouaeiouaeiouaonc"
+    ACCENT_UPCASE      = "ÁÉÍÓÚÂÊÎÔÛÄËÏÖÜÃÕÑÇ"
+    NO_ACCENT_UPCASE   = "AEIOUAEIOUAEIOUAONC"
 
     # Convert diacritics chars to their non-diacritic equivalents.
     #
