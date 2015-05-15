@@ -50,9 +50,11 @@ Buster.new('ação').up # => 'AÇÃO'
 Buster.new('É VocÊ?').downcase # => 'é você?'
 ```
 
-## Usage (monkey patch - my favorite #shame)
+## Usage (monkey patch)
 
-Just one method added to String: #buster. This should reduce the chance of name collision and it keeps the API clean and extensible.
+(#shame My favorite!)
+
+Just one method added: String#buster. This should reduce the chance of name collision and it keeps the API clean and extensible.
 
 If you are using it for applications, I recommend use it this way. If you are making a gem, avoid this.
 
@@ -71,7 +73,7 @@ require 'accent-buster/monkey_patch_string'
 
 ## Usage (with refinements)
 
-Safe, clean and "modern". :p
+Safe, clean and "modern" :p
 
 ```ruby
 require 'accent-buster'
