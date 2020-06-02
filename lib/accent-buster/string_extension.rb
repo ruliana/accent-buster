@@ -1,10 +1,6 @@
 module AccentBuster::StringExtension
   # @deprecated Use [Buster] or include [AccentBuster] to use #buster method
   refine String do
-    ACCENT_DOWNCASE    = "áéíóúâêîôûäëïöüãõñç"
-    NO_ACCENT_DOWNCASE = "aeiouaeiouaeiouaonc"
-    ACCENT_UPCASE      = "ÁÉÍÓÚÂÊÎÔÛÄËÏÖÜÃÕÑÇ"
-    NO_ACCENT_UPCASE   = "AEIOUAEIOUAEIOUAONC"
 
     # Convert diacritics chars to their non-diacritic equivalents.
     #
@@ -12,7 +8,8 @@ module AccentBuster::StringExtension
     #
     # Returns a copy of the string with diacritics removed.
     def accent_buster
-      self.tr(ACCENT_DOWNCASE + ACCENT_UPCASE, NO_ACCENT_DOWNCASE + NO_ACCENT_UPCASE)
+      self.tr(AccentBuster::Buster::ACCENT_DOWNCASE + AccentBuster::Buster::ACCENT_UPCASE, 
+              AccentBuster::Buster::NO_ACCENT_DOWNCASE + AccentBuster::Buster::NO_ACCENT_UPCASE)
     end
 
     # Convert diacritics chars to their non-diacritic equivalents.
@@ -23,25 +20,26 @@ module AccentBuster::StringExtension
     #
     # Returns the string or nil if no changes were made.
     def accent_buster!
-      self.tr!(ACCENT_DOWNCASE + ACCENT_UPCASE, NO_ACCENT_DOWNCASE + NO_ACCENT_UPCASE)
+      self.tr!(AccentBuster::Buster::ACCENT_DOWNCASE + AccentBuster::Buster::ACCENT_UPCASE, 
+               AccentBuster::Buster::NO_ACCENT_DOWNCASE + AccentBuster::Buster::NO_ACCENT_UPCASE)
     end
 
     def downcase
-      super.tr(ACCENT_UPCASE, ACCENT_DOWNCASE)
+      super.tr(AccentBuster::Buster::ACCENT_UPCASE, AccentBuster::Buster::ACCENT_DOWNCASE)
     end
 
     def downcase!
       super
-      self.tr!(ACCENT_UPCASE, ACCENT_DOWNCASE)
+      self.tr!(AccentBuster::Buster::ACCENT_UPCASE, AccentBuster::Buster::ACCENT_DOWNCASE)
     end
 
     def upcase
-      super.tr(ACCENT_DOWNCASE, ACCENT_UPCASE)
+      super.tr(AccentBuster::Buster::ACCENT_DOWNCASE, AccentBuster::Buster::ACCENT_UPCASE)
     end
 
     def upcase!
       super
-      self.tr!(ACCENT_DOWNCASE, ACCENT_UPCASE)
+      self.tr!(AccentBuster::Buster::ACCENT_DOWNCASE, AccentBuster::Buster::ACCENT_UPCASE)
     end
   end
 end
